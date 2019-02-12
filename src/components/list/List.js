@@ -1,15 +1,21 @@
 import React from 'react';
+import {
+    Container,
+    Wrapper,
+} from '../header/Style';
+import ListItem from './listItem/ListItem';
+
+
 
 const List = () => {
     return ( 
-        <div>
-            <div>
-                <div className="listItem">
-                    <p>date</p>
-                    <p>text</p>
-                </div>
-            </div>
-        </div>
+        <Container list>
+            <Wrapper list>
+                <ListItem/>
+                <ListItem/>
+                <ListItem/>
+            </Wrapper>
+        </Container>
      );
 }
  
