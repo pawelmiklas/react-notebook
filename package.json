@@ -1,6 +1,7 @@
 {
   "name": "react-todo",
   "version": "0.1.0",
+  "homepage": "http://snaqu.github.io/notebook",
   "private": true,
   "dependencies": {
     "react": "^16.8.1",
