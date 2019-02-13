@@ -8,6 +8,9 @@ export const Item = styled.div`
     border: 2px solid #D6EFFF;
     margin: 10px 0;
     padding: 15px 30px;
+    @media (max-width: 770px) {
+        width: 100%;
+    }
 `;
 export const Row = styled.div`
     width: 100%;
@@ -17,6 +20,14 @@ export const Row = styled.div`
     color: ${props => props.date ? 'gray' : '#000'};
     color: ${props => props.isDone ? 'gray' : null};
     text-decoration: ${props => props.isDone ? 'line-through' : null};
+    h4{
+        text-align: left;
+        font-weight: 400;
+        width: 100%;
+    }
+    @media (max-width: 410px) {
+        flex-direction: column;
+    }
 `;
 export const Circle = styled.div`
     width: 20px;
@@ -43,6 +54,10 @@ export const RowPair = styled.div`
     justify-content: ${props => props.right ? "flex-end" : "start"};
     align-items: center;
     width: 50%;
+    @media (max-width: 410px) {
+        width: 100%;
+        justify-content: flex-start;
+    }
 `;
 
 export const Cross = styled.div`

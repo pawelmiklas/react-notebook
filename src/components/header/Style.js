@@ -16,15 +16,21 @@ export const Wrapper = styled.div`
     margin: 0 30px;
     width: 1000px;
     height: 100%;
+    min-height: 300px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+    @media (max-width: 620px) {
+        padding: 40px 0;
+    }
 `;
 
 export const Form = styled.form`
-    width: 1000px;
+    max-width: 1000px;
+    width: 100%;
     height: 100%;
+    min-height: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,14 +56,26 @@ export const Label = styled.label`
         border: none;
         padding: 0 10px;
         font-size: 1rem;
+        @media (max-width: 620px) {
+            margin: 0;
+        }
+    }
+    @media (max-width: 620px) {
+        width: 100%;
+        margin-bottom: 25px;
     }
 `;
 
 export const FormElement = styled.div`
     display: flex;
     width: 100%;
-    height: 70px;
+    min-height: 70px;
+    height: 100%;
     flex-direction: row;
+    @media (max-width: 620px) {
+        width: 100%;
+    flex-direction: column;
+    }
 `;
 
 export const Submit = styled.input`
@@ -81,5 +99,5 @@ export const Submit = styled.input`
 export const Title = styled.h1`
     text-align: left;
     width: 100%;
-    margin-bottom: 5px;
+    margin: 5px;
 `;

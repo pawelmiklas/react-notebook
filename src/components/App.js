@@ -6,8 +6,9 @@ import { GlobalStyle } from './Style';
 class App extends Component {
   state = {
     data: [
-      { id: 0, text: 'lorem ipsum doloret sit ament', date: '2019-06-19', color: 'red', isDone: true },
-      { id: 1, text: 'lorem ipsum doloret sit ament', date: '2019-10-19', color: 'blue', isDone: false },
+      { id: 0, text: 'Go fishing in the Northwest Territories', date: '2021-11-07', color: 'red', isDone: false },
+      { id: 1, text: 'Learn to ski', date: '2019-06-15', color: 'blue', isDone: false },
+      { id: 2, text: 'Explore all 5 of Hawaii’s islands', date: '2019-11-01', color: 'green', isDone: true },
     ],
     textValue: '',
     colorValue: 'green',

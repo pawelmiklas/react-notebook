@@ -41,10 +41,12 @@ const Header = (props) => {
                                 id="color"
                                 onChange={props.change}
                                 value={props.colorValue}>
-                                <option value="green">green</option>
-                                <option value="red">red</option>
-                                <option value="blue">blue</option>
-                                <option value="yellow">yellow</option>
+                                <option value="green">Green</option>
+                                <option value="red">Red</option>
+                                <option value="blue">Blue</option>
+                                <option value="yellow">Yellow</option>
+                                <option value="purple">Purple</option>
+                                <option value="orange">Orange</option>
                             </select>
                         </Label>
                         <Label small>

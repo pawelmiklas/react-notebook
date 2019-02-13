@@ -32,7 +32,7 @@ const ListItem = (props) => {
                 </RowPair>
             </Row>
             <Row isDone={props.isDone}>
-                <p>{props.text}</p>
+                <h4>{props.text}</h4>
             </Row>
         </Item>
     );
