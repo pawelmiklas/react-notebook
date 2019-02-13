@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from './header/Header';
 import List from './list/List';
-import { GlobalStyle } from './Style';
+import { GlobalStyle, GlobalStyleBody } from './Style';
 
 class App extends Component {
   state = {
@@ -77,6 +77,7 @@ class App extends Component {
     return (
       <>
         <GlobalStyle />
+        <GlobalStyleBody />
         <Header
           textValue={this.state.textValue}
           dateValue={this.state.dateValue}
