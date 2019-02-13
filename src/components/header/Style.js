@@ -48,6 +48,7 @@ export const Label = styled.label`
         border: none;
         padding: 0 10px;
         font-size: 1rem;
+        background-color: #fff;
     }
     select {
         margin: 0 20px;
@@ -56,6 +57,7 @@ export const Label = styled.label`
         border: none;
         padding: 0 10px;
         font-size: 1rem;
+        background-color: #fff;
         @media (max-width: 620px) {
             margin: 0;
         }
