@@ -8,35 +8,34 @@ import {
     Delete
 } from './Style';
 
-const theme = {
-    main: "mediumseagreen"
-  };
 
 
-  /*
-    Dodać przycisk do skreślania tekstu jako zrobione.
-    Przycisk do ususwania taska.
-    Footer.
-    */
+/*
+Footer.
+*/
 
-const ListItem = () => {
-    return ( 
+const ListItem = (props) => {
+    let color = props.color;
+    if (props.isDone) {
+        color = 'gray';
+    }
+    return (
         <Item>
             <Row date>
                 <RowPair>
-                    <p>2019-05-10</p>
-                    <Circle theme={theme}/>
+                    <p>{props.date}</p>
+                    <Circle theme={color} />
                 </RowPair>
                 <RowPair right>
-                    <Cross>&minus;</Cross>
-                    <Delete>&#10060;</Delete>
+                    <Cross onClick={() => props.done(props.id)}><span role="img" aria-label="cross">&minus;</span></Cross>
+                    <Delete onClick={() => props.remove(props.id)}><span role="img" aria-label="delete">&#10060;</span></Delete>
                 </RowPair>
             </Row>
-            <Row>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero iure aspernatur omnis ipsa. Hic officiis quia quibusdam aspernatur, sapiente nemo.</p>
+            <Row isDone={props.isDone}>
+                <p>{props.text}</p>
             </Row>
         </Item>
-     );
+    );
 }
- 
+
 export default ListItem;

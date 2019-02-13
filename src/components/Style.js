@@ -8,6 +8,6 @@ export const GlobalStyle = createGlobalStyle`
 body {
     margin: 0;
     padding: 0;
-    @import url('https://fonts.googleapis.com/css?family=Catamaran:300,400,700');
+    @import url('https://fonts.googleapis.com/css?family=Catamaran:400,700');
   }
 `

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Item = styled.div`
-    width: 100%;
+    width: 49%;
     min-height: 120px;
     height: 100%;
     color: #000;
@@ -15,12 +15,14 @@ export const Row = styled.div`
     justify-content: space-between;
     align-items: center;
     color: ${props => props.date ? 'gray' : '#000'};
+    color: ${props => props.isDone ? 'gray' : null};
+    text-decoration: ${props => props.isDone ? 'line-through' : null};
 `;
 export const Circle = styled.div`
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: ${props => props.theme.main};
+    background: ${props => props.theme};
     position: relative;
     margin: 0 20px;
     ::before{
@@ -49,13 +51,12 @@ export const Cross = styled.div`
     border-radius: 50%;
     background: #d3d3d3;
     position: relative;
-    margin: 0 10px;
+    margin: 0 4px;
     cursor: pointer;
     color: #fff;
     font-size: 1.6rem;
     font-weight: bold;
     text-align: center;
-    font-weight: 300;
     line-height: 21px;
     transition: cubic-bezier(0.645, 0.045, 0.355, 1) .2s;
     :hover{
@@ -68,10 +69,7 @@ export const Delete = styled.div`
     height: 20px;
     border-radius: 50%;
     background: #d3d3d3;
-    /* display: flex; */
     color: #fff;
-    /* justify-content: center;
-    align-items: center; */
     line-height: 23px;
     text-align: center;
     font-size: .7rem;

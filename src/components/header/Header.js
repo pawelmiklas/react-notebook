@@ -1,8 +1,8 @@
 import React from 'react';
-import { 
+import {
     Container,
     Wrapper,
-    Form, 
+    Form,
     Label,
     FormElement,
     Submit,
@@ -10,23 +10,37 @@ import {
 } from './Style';
 
 
-const Header = () => {
-    return ( 
+const Header = (props) => {
+    return (
         <Container>
             <Wrapper>
-                <Form>
+                <Form onSubmit={props.submit}>
                     <Title>Add your note</Title>
                     <FormElement>
                         <Label>
-                            <input type="text" id="text"/>
+                            <input
+                                type="text"
+                                id="text"
+                                value={props.textValue}
+                                onChange={props.change}
+                            />
                         </Label>
                     </FormElement>
                     <FormElement>
                         <Label>
-                            <input type="date" id="date"/>
+                            <input
+                                type="date"
+                                id="date"
+                                onChange={props.change}
+                                value={props.dateValue}
+                            />
                         </Label>
                         <Label>
-                            <select name="color" id="color">
+                            <select
+                                name="color"
+                                id="color"
+                                onChange={props.change}
+                                value={props.colorValue}>
                                 <option value="green">green</option>
                                 <option value="red">red</option>
                                 <option value="blue">blue</option>
@@ -34,13 +48,13 @@ const Header = () => {
                             </select>
                         </Label>
                         <Label small>
-                            <Submit type="submit" value="Add"/>
+                            <Submit type="submit" value="Add" />
                         </Label>
                     </FormElement>
                 </Form>
             </Wrapper>
         </Container>
-     );
+    );
 }
- 
+
 export default Header;

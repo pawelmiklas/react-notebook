@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
     width: 100%;
     height: 100%;
-    min-height: ${props => props.list ? '500px' : '300px'}
+    min-height: ${props => props.list ? '500px' : '300px'};
     background-image: ${props => props.list ? '#fff' : 'linear-gradient(to right top, #fe654f, #fe5a42, #fd4e35, #fc4127, #fb3216)'};
     color: #fff;
     display: flex;
@@ -12,11 +12,14 @@ export const Container = styled.div`
 `;
 
 export const Wrapper = styled.div`
-    padding: ${props => props.list ? '70px 30px' : null};
+    padding: ${props => props.list ? '70px 0' : null};
+    margin: 0 30px;
     width: 1000px;
     height: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
 `;
 
 export const Form = styled.form`
