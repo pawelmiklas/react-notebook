@@ -47,7 +47,7 @@ class App extends Component {
         dateValue: new Date().toISOString().split("T")[0],
       })
     } else {
-      alert('Your task is to short!');
+      alert('Your task is too short!');
     }
   }
 
